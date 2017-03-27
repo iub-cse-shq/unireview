@@ -1,0 +1,47 @@
+* {
+	padding: 0;
+	margin: 0; 
+}
+
+#page {
+	width: 960px;
+	margin: 0 auto;
+}
+
+#nameError, #emailError, #phoneError {
+	color : red;
+}
+h1
+
+
+{
+
+	font-size: 60;
+	color: blue;
+
+}
+
+.tbl {
+	margin-top: 20px;
+	border-top: solid 4px green;
+	border-right: solid 4px green;
+	border-spacing: 0;
+	width: 70%;
+}
+
+.tbl tr td {
+	border-left: solid 4px green;
+	border-bottom: solid 4px green;
+	padding: 30px 30px;
+	align="center";
+}
+
+input[type="text"] {
+	width: 200px;
+	padding: 5px;
+}
+
+.btn {
+	padding: 15px 20px;
+	font-size: 20px;
+}
