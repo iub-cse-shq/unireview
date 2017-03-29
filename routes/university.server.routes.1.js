@@ -14,9 +14,16 @@ module.exports = function(app){
 	app.route('/api/universities/edit/:universityId')
 	.get(universities.read)
 	.put(users.requiresLogin, universities.update);
+	
+//Routes to render views
+  app.route('/universities/new').get(universities.new);
+  app.route('/universities/all').get(universities.all);
+  app.route('/universities/edit/:productId').get(universities.edit);
+app.route('/universities/:UniversityId').get(universities.view);
 
 
 app.param('universityId', universities.universityByID);
 
 
 }
+

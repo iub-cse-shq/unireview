@@ -20,8 +20,8 @@ module.exports.list = function(req, res) {
 
 module.exports.create = function(req, res) {
   var university = new University(req.body);
-  University.user = req.user;
-  University.save(function(err, data) {
+  university.user = req.user;
+  university.save(function(err, data) {
     if (err) {
       return res.status(400).send({
 
@@ -35,6 +35,47 @@ module.exports.create = function(req, res) {
 
 module.exports.read = function(req, res) {
   res.json(req.University);
+};
+exports.new = function(req, res) {
+	res.render('./../public/views/university/create.ejs', {
+		user: req.user || null,
+		request: req
+	});
+};
+
+exports.edit = function(req, res) {
+	res.render('./../public/views/university/edit.ejs', {
+		user: req.user || null,
+		request: req
+	});
+};
+
+exports.view = function(req, res) {
+	res.render('./../public/views/university/view.ejs', {
+		user: req.user || null,
+		request: req
+	});
+};
+
+exports.all = function(req, res) {
+ university.find(function(err, data) {
+    if (err) {
+      return res.status(400).send({
+
+          message: errorHandler.getErrorMessage(err)
+        });
+    } else {
+      console.log("api called");
+      console.log(data);
+
+      res.render('./../public/views/university/list.ejs', {
+    		user: req.user || null,
+    		request: req,
+        universities: data
+    	});
+    }
+  });
+
 };
 
 
