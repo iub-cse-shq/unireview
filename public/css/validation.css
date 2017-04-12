@@ -23,15 +23,15 @@ h1
 
 .tbl {
 	margin-top: 20px;
-	border-top: solid 4px green;
-	border-right: solid 4px green;
+	border-top: solid 1px blue;
+	border-right: solid 1px blue;
 	border-spacing: 0;
 	width: 70%;
 }
 
 .tbl tr td {
-	border-left: solid 4px green;
-	border-bottom: solid 4px green;
+	border-left: solid 1px blue;
+	border-bottom: solid 1px blue;
 	padding: 30px 30px;
 	align="center";
 }

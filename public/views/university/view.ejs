@@ -1,0 +1,46 @@
+ <DOCTYPE html>
+<html>
+<head>
+<title>review</title>
+</head>
+<style>
+*
+{
+  margin:5px;
+  padding:5px;
+}
+body
+{
+  background-image:url(/images/k.jpg);
+  background-repeat:repeat-x;
+}
+a{
+  color: white;
+   text-decoration:none;
+}
+
+</style>
+<body>
+  <a href="<%= request.university.url %>">
+      <img src="<%= request.university.photo %>" width="57" height="54"/> <%= request.university.name %>   </a><br>
+  <img src="/images/rs.png" width="57" height="54">
+
+  <pre>
+    <%= request.university.description %>
+  </pre>
+
+
+
+<form method='post'>
+
+  Comment:<br />
+  <textarea name='comment' id='comment'></textarea><br />
+
+  <input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>' />
+
+  <input type='submit' value='Submit' />
+</form>
+
+
+</body>
+</html>

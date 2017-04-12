@@ -51,6 +51,7 @@ exports.edit = function(req, res) {
 };
 
 exports.view = function(req, res) {
+  console.log(req.university)
 	res.render('./../public/views/university/view.ejs', {
 		user: req.user || null,
 		request: req
@@ -58,7 +59,7 @@ exports.view = function(req, res) {
 };
 
 exports.all = function(req, res) {
- university.find(function(err, data) {
+ University.find(function(err, data) {
     if (err) {
       return res.status(400).send({
 

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Validation
+		</title>
+		<link rel="stylesheet" type="text/css" href="css/validation.css">
+	</head>
+	<body>
+		<div id="page">
+			<div id="header">
+				<marquee><h1>University Review From</h1></marquee>
+			</div>
+			<div id="main">
+
+				<form id="registrationForm" action="process.php" method="post">
+				</br>
+					<table class="tbl" align="center">
+						<tr>
+							<td >
+								Name:
+
+
+							</td>
+							<td>
+								<input type="text" name="name" id="nameInput" >
+								<span id="nameError"></span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Email:
+							</td>
+							<td>
+								<input type="text" name="email" id="emailInput">
+								<span id="emailError"></span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Phone:
+							</td>
+							<td>
+								<input type="text" name="phone" id="phoneInput">
+								<span id="phoneError"></span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Gender:
+							</td>
+							<td>
+								<input type="radio" name="gender" id="genderInput" value="m">Male
+							    <input type="radio" name="gender" id="genderInput" value="f">Female
+								<span id="genderError" style="color: red"></span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								&nbsp;
+							</td>
+							<td>
+								<input type="submit" class="btn" id="submitInput" value="register now">
+							</td>
+						</tr>
+					</table>
+				</form>
+
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/validation.js"></script>
+</html>

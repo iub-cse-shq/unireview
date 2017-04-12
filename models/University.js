@@ -8,6 +8,19 @@ var UniversitySchema = {
     trim: true,
     required: 'Name required'
   },
+  photo: {
+    type: String,
+    default: '',
+    trim: true,
+    required: 'Photo required'
+  },
+  url: {
+    type: String,
+    default: '',
+    trim: true,
+    required: 'Url required'
+  },
+  
 
   rank: {
     type: Number,

@@ -19,7 +19,7 @@ module.exports = function(app){
   app.route('/universities/new').get(universities.new);
   app.route('/universities/all').get(universities.all);
   app.route('/universities/edit/:productId').get(universities.edit);
-app.route('/universities/:UniversityId').get(universities.view);
+app.route('/universities/:universityId').get(universities.view);
 
 
 app.param('universityId', universities.universityByID);
